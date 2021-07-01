@@ -1,0 +1,2 @@
+class Pea < ApplicationRecord
+end

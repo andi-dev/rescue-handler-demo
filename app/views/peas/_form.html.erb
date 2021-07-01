@@ -1,0 +1,17 @@
+<%= form_with(model: pea, local: true) do |form| %>
+  <% if pea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pea.errors.count, "error") %> prohibited this pea from being saved:</h2>
+
+      <ul>
+        <% pea.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
